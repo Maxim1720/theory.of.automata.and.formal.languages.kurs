@@ -1,0 +1,12 @@
+integer
+real
+boolean
+if
+then
+else
+for
+to
+do
+while
+read
+write
