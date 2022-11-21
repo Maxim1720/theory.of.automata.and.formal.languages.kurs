@@ -1,61 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a815501-b971-4f33-860b-2d7da7cf13a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LexAnalyzer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/code.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/source/ti.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/source/tl.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/source/tw.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/Analyzer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/file/FileLooker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/file/FileOuter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/file/FilePutter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/AnalyzeData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/FSM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/FiniteStatesMachine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/StateType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/state/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/state/current/BinaryEndState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/state/current/BinaryState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/state/current/DecimalState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/state/current/EpsFloatState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/state/current/EpsState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/state/current/FloatState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/state/current/HexEndState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/state/current/HexState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/state/current/IdentifierState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/state/current/OctState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/state/end/EndState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/state/end/ErrorState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/state/fabric/StatesFabric.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/state/start/StartState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/table/Looker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/table/Outter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/table/Putter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/table/Table.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/table/TableLooker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/table/TableOutter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/table/TablePutter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/table/file/TableReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/table/file/TableWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/table/search/KnuthMorrisPrattSearcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/table/util/TableType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/fsm/table/util/TableUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/newFsm/FiniteStatesMachine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/newFsm/state/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/fsm/state/current/IdentifierStateTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/ru/newFsm/FiniteStatesMachineTest.java" afterDir="false" />
+    <list default="true" id="0a815501-b971-4f33-860b-2d7da7cf13a4" name="Changes" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/AnalyzeData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/FSM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/FiniteStatesMachine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/StateType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/State.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/BinaryEndState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/BinaryState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/DecimalState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/EpsFloatState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/EpsState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/FloatState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/HexEndState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/HexState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/IdentifierState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/OctState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/end/EndState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/end/ErrorState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/fabric/StatesFabric.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/start/StartState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/Looker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/Outter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/Putter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/Table.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/TableLooker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/TableOutter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/TablePutter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/file/TableReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/file/TableWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/search/KnuthMorrisPrattSearcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/util/TableType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/util/TableUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/newFsm/FiniteStatesMachine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/newFsm/state/State.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ru/newFsm/FiniteStatesMachineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ru/newFsm/FiniteStatesMachineTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +54,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -217,8 +203,23 @@
       <updated>1668646056719</updated>
       <workItem from="1668646057944" duration="24085000" />
       <workItem from="1668923437037" duration="19054000" />
-      <workItem from="1668946144920" duration="11147000" />
+      <workItem from="1668946144920" duration="11889000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1669007398126</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669007398126</updated>
+    </task>
+    <task id="LOCAL-00002" summary="initial commit">
+      <created>1669007624061</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669007624061</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +236,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -245,7 +250,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ru/Analyzer.java</url>
-          <line>177</line>
+          <line>178</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
