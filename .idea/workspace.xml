@@ -1,42 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a815501-b971-4f33-860b-2d7da7cf13a4" name="Changes" comment="initial commit">
+    <list default="true" id="0a815501-b971-4f33-860b-2d7da7cf13a4" name="Changes" comment="to remove unnecessary classes">
+      <change afterPath="$PROJECT_DIR$/src/ru/Reader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/state/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/state/StateData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/state/StateType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/state/impl/IdentifierState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/AnalyzeData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/FSM.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/FiniteStatesMachine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/StateType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/State.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/BinaryEndState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/BinaryState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/DecimalState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/EpsFloatState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/EpsState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/FloatState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/HexEndState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/HexState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/IdentifierState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/current/OctState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/end/EndState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/end/ErrorState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/fabric/StatesFabric.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/state/start/StartState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/Looker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/Outter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/Putter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/Table.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/TableLooker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/TableOutter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/TablePutter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/file/TableReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/file/TableWriter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/search/KnuthMorrisPrattSearcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/util/TableType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/fsm/table/util/TableUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/newFsm/FiniteStatesMachine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/newFsm/state/State.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/ru/newFsm/FiniteStatesMachineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ru/newFsm/FiniteStatesMachineTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LexAnalyzer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LexAnalyzer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/code.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/code.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/out_table/lex_table.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/out_table/lex_table.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/source/ti.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/source/ti.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/source/tl.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/source/tl.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/source/tn.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/source/tn.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/Analyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/Analyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/fsm/state/current/IdentifierStateTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +183,14 @@
       <updated>1668646056719</updated>
       <workItem from="1668646057944" duration="24085000" />
       <workItem from="1668923437037" duration="19054000" />
-      <workItem from="1668946144920" duration="11889000" />
+      <workItem from="1668946144920" duration="12097000" />
+      <workItem from="1669013166657" duration="3358000" />
+      <workItem from="1669027695142" duration="1737000" />
+      <workItem from="1669031140271" duration="66000" />
+      <workItem from="1669117176445" duration="402000" />
+      <workItem from="1669625314745" duration="3731000" />
+      <workItem from="1669636318108" duration="8000" />
+      <workItem from="1669736559998" duration="9020000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1669007398126</created>
@@ -219,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669007624061</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="to remove unnecessary classes">
+      <created>1669007903913</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669007903913</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +232,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="to remove unnecessary classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="to remove unnecessary classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -250,8 +245,43 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ru/Analyzer.java</url>
-          <line>178</line>
+          <line>176</line>
           <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ru/Analyzer.java</url>
+          <line>300</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ru/Analyzer.java</url>
+          <line>191</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ru/Analyzer.java</url>
+          <line>208</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ru/Analyzer.java</url>
+          <line>323</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ru/Analyzer.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ru/Analyzer.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ru/Analyzer.java</url>
+          <line>224</line>
+          <option name="timeStamp" value="66" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

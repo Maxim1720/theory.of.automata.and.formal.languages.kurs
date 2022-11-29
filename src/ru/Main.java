@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
         flushFiles();
-        new Analyzer("<> <= >= <").analyze();
+        new Analyzer().analyze();
     }
 
     public static void flushFiles(){

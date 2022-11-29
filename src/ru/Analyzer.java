@@ -3,98 +3,95 @@ package ru;
 import ru.file.FileLooker;
 import ru.file.FileOuter;
 import ru.file.FilePutter;
+import ru.state.StateType;
 
-import java.io.*;
-import java.nio.file.Paths;
-import java.util.List;
 import java.util.regex.Pattern;
 
 public class Analyzer {
-
-    private char ch;
-
     private String buffer;
-    private int index, z;
-    private final char[] code;
+    private int z;
 
-    private final BufferedReader codeReader;
-
-    private final String outPath;
     private final String sourcePath;
 
-    public Analyzer(String code){
-        this.code = code.toCharArray();
-        this.index = 0;
+
+    private final Reader reader;
+
+
+    public Analyzer() {
         this.z = 0;
-
-        try {
-            codeReader = new BufferedReader(new FileReader(Paths.get(
-                    "/home/almat/IdeaProjects/LexAnalyzer/src/res/code.txt"
-            ).toFile()));
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-
-        outPath = "/home/almat/IdeaProjects/LexAnalyzer/src/res/out_table/lex_table.txt";
         sourcePath = "/home/almat/IdeaProjects/LexAnalyzer/src/res/source/";
-
+        reader = new Reader();
     }
 
 
+    private boolean canRead(){
+        return reader.getCurrent() != Character.MAX_VALUE;
+    }
+
+
+    //если символ был проигнорирован состоянием, его следует сохранить до следующего чтения
     public void analyze(){
-        while (gc()){
+        stateType = StateType.START;
+        while (canRead()){
+
+            if(reader.getCurrent() == Character.MIN_VALUE){
+                reader.next();
+            }
+
             flush();
             if(!isWhiteSpace()){
-//                add();
                 if(let()) {
-//                    add();
                     identifierState();
                 }
-                else if(isBinary(ch)){
+                else if(isBinary(reader.getCurrent())){
                     binaryState();
                 }
-                else if(isOct(ch)){
+                else if(isOct(reader.getCurrent())){
                     octState();
                 }
-                else if (isDecimal(ch)){
+                else if (isDecimal(reader.getCurrent())){
                     decimalState();
-                } else if(isComment(ch)){
+                } else if(isComment(reader.getCurrent())){
                     commentState();
-                } else if (isDelimiter(ch)) {
+                } else if (isDelimiter(reader.getCurrent())) {
                     delimiterState();
                 }
                 else {
                     add();
                     throwError();
                 }
+                System.out.println(buffer +"\t:"+z);
             }
-            System.out.println(buffer);
+            else{
+                reader.next();
+            }
+        }
+        if (!stateType.equals(StateType.END)){
+            throwError();
         }
     }
 
+    private StateType stateType;
+
     private void biggerCharState() {
-        if(gc()){
-            if(ch=='='){
+        if(canRead()){
+            reader.next();
+            if(reader.getCurrent()=='='){
                 add();
-                out(3);
+                lookTL(buffer);
+                out(2);
             }
         }
     }
 
     private void lessCharState() {
-
-        if(gc()){
-            if(ch == '>'){
+        if(canRead()){
+            reader.next();
+            char c = reader.getCurrent();
+            if(c == '>' || c == '='){
                 add();
                 lookTL(buffer);
-                out(3);
-
-
-            }
-            else if (ch == '='){
-                add();
-                lookTL(buffer);
-                out(3);
+                out(2);
             }
             System.out.println("less char delimiter: " + buffer);
         }
@@ -111,19 +108,19 @@ public class Analyzer {
 
     private void delimiterState() {
         add();
-        if (isLessChar(ch)) {
+        if (isLessChar(buffer.charAt(0))) {
             lessCharState();
-        } else if (isBiggerChar(ch)) {
+        } else if (isBiggerChar(buffer.charAt(0))) {
             biggerCharState();
         } else if(lookTL(buffer) != 0){
             out(2);
-            if(ch == '}') {
+            if(buffer.equals("}")) {
                 endState();
             }
         } else {
             throwError();
         }
-
+        reader.next();
     }
 
     private boolean isDelimiter(char ch) {
@@ -132,13 +129,14 @@ public class Analyzer {
     }
 
     private void endState() {
-
+        stateType = StateType.END;
     }
 
     private void commentState() {
         boolean end = false;
-        while (gc()){
-            if(ch == '#'){
+        while (canRead() && !end){
+            reader.next();
+            if(reader.getCurrent() == '#'){
                 end = true;
             }
         }
@@ -153,40 +151,38 @@ public class Analyzer {
 
 
     private void binaryState(){
-        add();
-        while (gc() && isBinary(ch)){
+        while (canRead() && isBinary(reader.getCurrent())){
             add();
+            reader.next();
         }
-        if(isOct(ch)){
+        if(isOct(reader.getCurrent())){
             octState();
         }
-        else if(isDecimal(ch)){
+        else if(isDecimal(reader.getCurrent())){
             decimalState();
         }
-        else if(isFloat(ch)){
+        else if(isFloat(reader.getCurrent())){
             floatState();
         }
-        else if(isExp(ch)){
+        else if(isExp(reader.getCurrent())){
             expState();
         }
-        else if(isDecimalEnd(ch)){
+        else if(isDecimalEnd(reader.getCurrent())){
             decimalEndState();
         }
-        else if(isOctEnd(ch)){
+        else if(isOctEnd(reader.getCurrent())){
             octEndState();
         }
-        else if(isHexFromBinary(ch)){
+        else if(isHexFromBinary(reader.getCurrent())){
             hexState();
         }
-        else if(isHexEnd(ch)){
+        else if(isHexEnd(reader.getCurrent())){
             hexEndState();
         }
-        else if(isBinaryEnd(ch)){
+        else if(isBinaryEnd(reader.getCurrent())){
             binaryEndState();
-            System.out.println("2cc " + buffer);
         }
         else {
-            System.out.println("10cc " + buffer);
             numberEnd();
         }
 
@@ -194,11 +190,12 @@ public class Analyzer {
 
     private void binaryEndState() {
         add();
-        if(isHex(ch) || digit()){
+        reader.next();
+        if(isHex(reader.getCurrent()) || digit()){
             hexState();
-        } else if (isHexEnd(ch)) {
+        } else if (isHexEnd(reader.getCurrent())) {
             hexEndState();
-        } else if (gc() && !isWhiteSpace()) {
+        } else if (canRead() && !isWhiteSpace()) {
             throwError();
         }
         else{
@@ -209,14 +206,15 @@ public class Analyzer {
 
     private void hexState() {
 
-        while (gc() && (digit() || isHex(ch))){
+        while (canRead() && (digit() || isHex(reader.getCurrent()))){
             add();
+            reader.next();
         }
-        if(isHexEnd(ch)){
+        if(isHexEnd(reader.getCurrent())){
             hexEndState();
         }
         else {//(!isWhiteSpace() && lookTL(String.valueOf(ch))==0){
-            add();
+            //add();
             throwError();
         }
 
@@ -224,40 +222,46 @@ public class Analyzer {
 
     private void hexEndState() {
         add();
-        put(4);
-        out(4);
-    }
-
-    private void octEndState() {
-        add();
-        if(gc() && !isWhiteSpace()){
+        reader.next();
+        if(!isWhiteSpace() && !isDelimiter(reader.getCurrent())){
+            add();
             throwError();
         }
     }
 
+    private void octEndState() {
+        add();
+        if(canRead()) {
+            reader.next();
+            if (!isWhiteSpace() && !isDelimiter(reader.getCurrent())) {
+                add();
+                throwError();
+            }
+        }
+        put(4);
+    }
+
     private void decimalEndState() {
         add();
-        if(gc()){
-            if(isHex(ch) || digit()){
+        reader.next();
+        if(canRead()){
+            if(isHex(reader.getCurrent()) || digit()){
                 hexState();
-            } else if (isHexEnd(ch)) {
+            } else if (isHexEnd(reader.getCurrent())) {
                 hexEndState();
             }
             else if(!isWhiteSpace()) {
                 throwError();
             }
         }
-        System.out.println("10cc " + buffer);
-
-
     }
 
     private void expState() {
         add();
-        gc();
-        if (ch == '+' || ch == '-'){
+        reader.next();
+        if (reader.getCurrent() == '+' || reader.getCurrent() == '-'){
             add();
-            while (gc() && digit()){
+            while (canRead() && digit()){
                 add();
             }
             if (!isWhiteSpace()){
@@ -268,40 +272,40 @@ public class Analyzer {
         }
         else if (digit()) {
             add();
-            while (gc() && digit()){
+            while (canRead() && digit()){
                 add();
             }
-            if(isHex(ch)){
+            if(isHex(reader.getCurrent())){
                 hexState();
             }
-            else if (isHexEnd(ch)){
+            else if (isHexEnd(reader.getCurrent())){
                 hexEndState();
             }
             else if(!isWhiteSpace()) {
                 throwError();
             }
-            System.out.println("exp: " + buffer);
         }
-        else if (isHex(ch)){
+        else if (isHex(reader.getCurrent())){
             hexState();
-        } else if (isHexEnd(ch)) {
+        } else if (isHexEnd(reader.getCurrent())) {
             hexEndState();
         }
     }
 
     private void floatState() {
         add();
-        while (gc() && digit()){
+        reader.next();
+        while (canRead() && digit()){
             add();
+            reader.next();
         }
-        if(isExp(ch)){
+        if(isExp(reader.getCurrent())){
             floatExpState();
-        }else if(!isWhiteSpace() && lookTL(String.valueOf(ch))==0) {
+        }else if(!isWhiteSpace() && lookTL(String.valueOf(reader.getCurrent()))==0) {
             add();
             throwError();
         }
         numberEnd();
-        System.out.println("float: " + buffer);
     }
 
     private void numberEnd(){
@@ -311,9 +315,11 @@ public class Analyzer {
 
     private void floatExpState() {
         add();
-        if(gc()){
-            if(ch=='+' || ch=='-'){
+        reader.next();
+        if(canRead()){
+            if(reader.getCurrent()=='+' || reader.getCurrent()=='-'){
                 add();
+                reader.next();
                 addAllNextDigits();
             } else if (digit()) {
                 add();
@@ -322,13 +328,13 @@ public class Analyzer {
             else {
                 throwError();
             }
-            System.out.println("float exp: " + buffer);
         }
     }
 
     private void addAllNextDigits(){
-        while (gc() && digit()){
+        while (canRead() && digit()){
             add();
+            reader.next();
         }
     }
 
@@ -367,25 +373,27 @@ public class Analyzer {
 
 
     private void decimalState(){
-        add();
-        while (gc() && digit()){
+//        add();
+        while (canRead() && digit()){
             add();
+            reader.next();
         }
         Pattern hexFromDecimal = Pattern.compile("[ABCFabcf]");
-        if(hexFromDecimal.matcher(String.valueOf(ch)).matches()){
+        if(hexFromDecimal.matcher(String.valueOf(reader.getCurrent())).matches()){
             hexState();
-        } else if (isFloat(ch)) {
+        } else if (isFloat(reader.getCurrent())) {
             floatState();
-        } else if (isExp(ch)) {
+        } else if (isExp(reader.getCurrent())) {
             expState();
-        } else if (isHexEnd(ch)){
+        } else if (isHexEnd(reader.getCurrent())){
             hexEndState();
         }
-        else if (isDecimalEnd(ch)){
+        else if (isDecimalEnd(reader.getCurrent())){
             decimalEndState();
         }
-        else{
-            System.out.println("10cc " + buffer);
+        else if(!isWhiteSpace() && !isDelimiter(reader.getCurrent())) {
+            add();
+            throwError();
         }
         put(4);
         out(4);
@@ -395,29 +403,31 @@ public class Analyzer {
     }
 
     private void octState(){
-        add();
+        //add();
         Pattern pattern = Pattern.compile("[0-7]");
-        while (gc() && pattern.matcher(String.valueOf(ch)).matches()){
+        while (canRead() && pattern.matcher(String.valueOf(reader.getCurrent())).matches()){
             add();
+            reader.next();
         }
-        if (isOctEnd(ch)){
+        if (isOctEnd(reader.getCurrent())){
             octEndState();
             System.out.println("8cc " + buffer);
-        } else if (isDecimal(ch)) {
+        } else if (isDecimal(reader.getCurrent())) {
             decimalState();
-        } else if (isExp(ch)) {
+        } else if (isExp(reader.getCurrent())) {
             expState();
-        } else if (isDecimalEnd(ch)) {
+        } else if (isDecimalEnd(reader.getCurrent())) {
             decimalEndState();
         }
         //hex from oct
-        else if (Pattern.compile("[ABCF]").matcher(String.valueOf(ch)).matches()) {
+        else if (Pattern.compile("[ABCF]").matcher(String.valueOf(reader.getCurrent())).matches()) {
             hexState();
-        } else if (isHexEnd(ch)) {
+        } else if (isHexEnd(reader.getCurrent())) {
             hexEndState();
-        } else if (isFloat(ch)) {
+        } else if (isFloat(reader.getCurrent())) {
             floatState();
-        } else if (!isWhiteSpace() && lookTL(String.valueOf(ch))==0){
+        } else if (!isWhiteSpace() && isDelimiter(reader.getCurrent())){
+            add();
             throwError();
         }
         else {
@@ -438,11 +448,11 @@ public class Analyzer {
         return Pattern.compile("[01]").matcher(String.valueOf(c)).matches();
     }
     private void identifierState(){
-        add();
-        while (gc() && isIdentifier(ch)){
+        //add();
+        while (canRead() && isIdentifier()){
             add();
+            reader.next();
         }
-
         if(lookTW(buffer)!=0){
             out(1);
         }else {
@@ -456,7 +466,10 @@ public class Analyzer {
                 out(3);
             }
         }
-        System.out.println("identifier: " + buffer);
+        //reader.next();
+        //gc();
+
+        //System.out.println("identifier: " + buffer);
     }
 
     private int lookTI(String lexem) {
@@ -489,34 +502,24 @@ public class Analyzer {
 
     }
     private boolean isWhiteSpace(){
-        return Pattern.matches("\\s",String.valueOf(ch));
+        return Character.isWhitespace(reader.getCurrent());//Character.isWhitespace(reader.getCurrent());//Pattern.matches("\\s",String.valueOf(ch));
     }
 
-    private boolean isIdentifier(char c){
+    private boolean isIdentifier(){
         return let() || digit();
     }
 
-    private boolean gc(){
-        try {
-            if(codeReader.ready()){
-                ch = (char)codeReader.read();
-                return true;
-            }
-            return false;
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
+
 
     private void add(){
-        buffer+=ch;
+        buffer+=reader.getCurrent();
     }
 
     private boolean let(){
-        return Pattern.compile("[a-zA-Z]").matcher(String.valueOf(ch)).matches();
+        return Character.isLetter(reader.getCurrent());//Pattern.compile("[a-zA-Z]").matcher(String.valueOf(reader.getCurrent())).matches();
     }
 
     private boolean digit(){
-        return Pattern.compile("\\d").matcher(String.valueOf(ch)).matches();
+        return Character.isDigit(reader.getCurrent());//Pattern.compile("\\d").matcher(String.valueOf(reader.getCurrent())).matches();
     }
 }

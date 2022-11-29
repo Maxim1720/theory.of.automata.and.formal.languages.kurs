@@ -1,12 +1,4 @@
-{
-    a, b, c : integer;
-    e, f : real;
-    a as 5;
-    b as a;
-    c as 7;
-    e as 1.78999e+5;
-    f as 111b111;
 
-    if a<>c then write(a,c) else write(c);
-    for i as 0 to i=c do i as i+1;
+{
+    252525b
 }
