@@ -1,8 +1,9 @@
 package ru;
 
-import ru.state.StateData;
-
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.nio.file.Paths;
 
 public class Reader {
@@ -19,6 +20,15 @@ public class Reader {
             throw new RuntimeException(e);
         }
     }
+
+    public boolean charsExists()  {
+        try {
+            return bufferedReader.ready();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
     public char getCurrent(){
         return ch;

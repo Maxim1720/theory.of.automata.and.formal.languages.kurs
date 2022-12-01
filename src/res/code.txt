@@ -1,4 +1,30 @@
-
 {
-    252525b
+
+    # объявление целочисленных переменных #
+    a, b, c: integer;
+    # объявление переменных с плавающей запятой #
+    e, f: real;
+    a as 5;
+    b as a;
+    c as 7;
+    if a <> then write(a,c) else write(c);
+    for i as 0 to i=c do i as i+1;
+
+    #после точки должна быть цифра#
+    e as 5e2;
+    f as 5.99e+12;
+
+    b as 15e+10;
+    b as 15e-888;
+
+    e as 8.78978979e+199
+
+    g, l: integer;
+    g as 13213o;
+    l as 10101b;
+
+    h: integer;
+
+    #не должен начинаться с буквы#
+    h as 0a4644BCEFDh;
 }

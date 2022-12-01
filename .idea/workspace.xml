@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a815501-b971-4f33-860b-2d7da7cf13a4" name="Changes" comment="to remove unnecessary classes">
-      <change afterPath="$PROJECT_DIR$/src/ru/Reader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/StateData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/StateType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/impl/IdentifierState.java" afterDir="false" />
+    <list default="true" id="0a815501-b971-4f33-860b-2d7da7cf13a4" name="Changes" comment="to refactor and edit code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LexAnalyzer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LexAnalyzer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/res/code.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/code.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/res/out_table/lex_table.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/out_table/lex_table.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/res/source/ti.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/source/ti.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/source/tl.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/source/tl.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/res/source/tn.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/source/tn.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/Analyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/Analyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/fsm/state/current/IdentifierStateTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/StateType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/StateType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +184,8 @@
       <workItem from="1669117176445" duration="402000" />
       <workItem from="1669625314745" duration="3731000" />
       <workItem from="1669636318108" duration="8000" />
-      <workItem from="1669736559998" duration="9020000" />
+      <workItem from="1669736559998" duration="9864000" />
+      <workItem from="1669894308981" duration="5326000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1669007398126</created>
@@ -213,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669007903913</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="to refactor and edit code">
+      <created>1669753651840</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669753651841</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,7 +235,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="to remove unnecessary classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="to remove unnecessary classes" />
+    <MESSAGE value="to refactor and edit code" />
+    <option name="LAST_COMMIT_MESSAGE" value="to refactor and edit code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -245,42 +248,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ru/Analyzer.java</url>
-          <line>176</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ru/Analyzer.java</url>
-          <line>300</line>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ru/Analyzer.java</url>
-          <line>191</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ru/Analyzer.java</url>
-          <line>208</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ru/Analyzer.java</url>
-          <line>323</line>
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ru/Analyzer.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ru/Analyzer.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ru/Analyzer.java</url>
-          <line>224</line>
+          <line>223</line>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
       </breakpoints>
