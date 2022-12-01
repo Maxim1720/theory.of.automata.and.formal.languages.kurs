@@ -29,11 +29,6 @@ public class Analyzer {
         states.add(new DelimiterState());
 
     }
-
-
-
-
-    //если символ был проигнорирован состоянием, его следует сохранить до следующего чтения
     public void analyze() {
         Reader reader = new Reader();
         reader.setStateType(StateType.START);
