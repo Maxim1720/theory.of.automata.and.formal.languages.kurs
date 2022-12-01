@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a815501-b971-4f33-860b-2d7da7cf13a4" name="Changes" comment="to create new architecture">
-      <change afterPath="$PROJECT_DIR$/src/ru/file/TableUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/handler/NumberLexemHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/impl/CommentState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/impl/EndState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/impl/delimiter/BiggerCharState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/impl/delimiter/DelimiterState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/impl/delimiter/LessCharState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/impl/exp/ExpState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/impl/exp/FloatExpState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/impl/number/FloatState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/impl/number/binary/BinaryEndState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/impl/number/binary/BinaryState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/impl/number/decimal/DecimalEndState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/impl/number/decimal/DecimalState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/impl/number/hex/HexEndState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/impl/number/hex/HexState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/impl/number/oct/OctEndState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/impl/number/oct/OctState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/state/transitor/NumberTransitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/code.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/code.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/out_table/lex_table.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/out_table/lex_table.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/source/tn.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/source/tn.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/Analyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/Analyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/StateData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/StateType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/StateType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/IdentifierState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/impl/IdentifierState.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +177,7 @@
       <workItem from="1669625314745" duration="3731000" />
       <workItem from="1669636318108" duration="8000" />
       <workItem from="1669736559998" duration="9864000" />
-      <workItem from="1669894308981" duration="22531000" />
+      <workItem from="1669894308981" duration="22847000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1669007398126</created>
@@ -242,7 +214,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669902241163</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="to create new architecture">
+      <created>1669935912049</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669935912049</updated>
+    </task>
+    <task id="LOCAL-00007" summary="to create new architecture">
+      <created>1669935918090</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669935918090</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

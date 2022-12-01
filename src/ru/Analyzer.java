@@ -69,7 +69,6 @@ public class Analyzer {
     }
 
     private boolean isNeedStopAnalyze(Reader reader) {
-        return !reader.charsExists()
-                || reader.getStateType().equals(StateType.END);
+        return !reader.charsExists() && reader.getCurrent() == Character.MAX_VALUE;
     }
 }
