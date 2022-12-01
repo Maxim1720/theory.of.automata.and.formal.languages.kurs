@@ -1,52 +1,52 @@
 package ru.state.impl;
 
+import ru.Reader;
 import ru.file.FileLooker;
 import ru.file.FileOuter;
 import ru.file.FilePutter;
+import ru.file.TableUtil;
 import ru.state.State;
-import ru.state.StateData;
 import ru.state.StateType;
-
-import java.util.regex.Pattern;
 
 public class IdentifierState extends State {
 
     @Override
-    public boolean is(String ch) {
-        return Pattern.compile("[a-zA-Z]").matcher(ch).matches();
+    public boolean is(char ch) {
+        return Character.isLetter(ch);
     }
 
     @Override
-    public StateData transit(StateData stateData) {
-        stateData.add();
-        while (stateData.canRead() && is(String.valueOf(stateData.gc()))){
-            stateData.add();
+    public Reader transit(Reader reader) {
+        reader.setStateType(StateType.IDENTIFIER);
+        while (reader.charsExists()
+                && (is(reader.getCurrent())
+                || Character.isDigit(reader.getCurrent()))){
+            reader.add();
+            reader.next();
         }
-        int z = new FileLooker("/home/almat/IdeaProjects/LexAnalyzer/src/res/source/tw.txt")
-                .look(stateData.getBuffer());
+        writeToFiles(reader);
+        return reader;
+    }
 
+    private void writeToFiles(Reader reader){
+        int z = new FileLooker(TableUtil.twPath).look(reader.getBuffer());
         if(z!=0){
-            new FileOuter().out(1,z);
+            reader.setStateType(StateType.KEY_WORD);
+            new FileOuter().out(TableUtil.twNumber,z);
         }
-        else {
-            z = new FileLooker("/home/almat/IdeaProjects/LexAnalyzer/src/res/source/tl.txt")
-                    .look(stateData.getBuffer());
-
-            if(z !=0){
-                new FileOuter().out(2,z);
-            }
-            else{
-                z = new FileLooker("/home/almat/IdeaProjects/LexAnalyzer/src/res/source/ti.txt")
-                        .look(stateData.getBuffer());
+        else{
+            reader.setStateType(StateType.DELIMITER);
+            z = new FileLooker(TableUtil.tlPath).look(reader.getBuffer());
+            if(z!=0){
+                new FileOuter().out(TableUtil.tlNumber,z);
+            } else {
+                reader.setStateType(StateType.IDENTIFIER);
+                z = new FileLooker(TableUtil.tiPath).look(reader.getBuffer());
                 if(z==0){
-                    new FilePutter("/home/almat/IdeaProjects/LexAnalyzer/src/res/source/ti.txt")
-                            .put(3,stateData.getBuffer());
+                    new FilePutter(TableUtil.tiPath).put(TableUtil.tiNumber, reader.getBuffer());
                 }
-                new FileOuter().out(3,z);
+                new FileOuter().out(TableUtil.tiNumber,z);
             }
         }
-
-        stateData.setStateType(StateType.START);
-        return stateData;
     }
 }

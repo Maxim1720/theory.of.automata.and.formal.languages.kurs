@@ -1,7 +1,9 @@
 package ru.state;
 
+import ru.Reader;
+
 public abstract class State {
-    public abstract boolean is(String ch);
-    public abstract StateData transit(StateData stateData);
+    public abstract boolean is(char ch);
+    public abstract Reader transit(Reader reader);
 
 }

@@ -18,5 +18,9 @@ public enum StateType {
     COMMENT,
     DELIMITER,
     IDENTIFIER,
-    WHITE_SPACE
+    WHITE_SPACE,
+
+    KEY_WORD,
+    BIGGER_CHAR,
+    LESS_CHAR
 }

@@ -1,5 +1,9 @@
 package ru;
 
+import ru.file.FileLooker;
+import ru.file.TableUtil;
+import ru.state.StateType;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -11,6 +15,10 @@ public class Reader {
     private final BufferedReader bufferedReader;
     private char ch;
 
+    private String buffer;
+
+    private StateType stateType;
+
     public Reader() {
         try {
             String codePath = "/home/almat/IdeaProjects/LexAnalyzer/src/res/code.txt";
@@ -19,6 +27,26 @@ public class Reader {
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
+        flush();
+    }
+
+    public String getBuffer(){
+        return buffer;
+    }
+
+    public void flush(){
+        buffer = "";
+    }
+    public void add(){
+        buffer+=getCurrent();
+    }
+
+    public StateType getStateType() {
+        return stateType;
+    }
+
+    public void setStateType(StateType stateType) {
+        this.stateType = stateType;
     }
 
     public boolean charsExists()  {
@@ -48,6 +76,10 @@ public class Reader {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public boolean currentIsDelimiter() {
+        return new FileLooker(TableUtil.tlPath).look(String.valueOf(getCurrent())) != 0;
     }
 
 }
