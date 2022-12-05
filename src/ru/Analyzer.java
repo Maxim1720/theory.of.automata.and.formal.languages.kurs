@@ -33,7 +33,7 @@ public final class Analyzer {
         reader.setStateType(StateType.START);
         if (reader.charsExists()) {
             while (!isNeedStopAnalyze(reader)) {
-                reader = readLexem(reader);
+                reader = readLexeme(reader);
                 if (reader.getStateType().equals(StateType.ERR)) {
                     throw new IllegalArgumentException("invalid lexem: " + reader.getBuffer());
                 }
@@ -41,7 +41,7 @@ public final class Analyzer {
         }
     }
 
-    private Reader readLexem(Reader reader){
+    private Reader readLexeme(Reader reader){
         reader.flush();
         if (!Character.isWhitespace(reader.getCurrent())) {
             reader = tryTransit(reader);

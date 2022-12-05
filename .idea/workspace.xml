@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a815501-b971-4f33-860b-2d7da7cf13a4" name="Changes" comment="to create new architecture">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/Analyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/Analyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/CommentState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/impl/CommentState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/EndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/impl/EndState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/IdentifierState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/impl/IdentifierState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/delimiter/BiggerCharState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/impl/delimiter/BiggerCharState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/delimiter/DelimiterState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/impl/delimiter/DelimiterState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/delimiter/LessCharState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/impl/delimiter/LessCharState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/exp/ExpState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/impl/exp/ExpState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/exp/FloatExpState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/impl/exp/FloatExpState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/FloatState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/impl/number/FloatState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/binary/BinaryEndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/impl/number/binary/BinaryEndState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/binary/BinaryState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/impl/number/binary/BinaryState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/decimal/DecimalEndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/impl/number/decimal/DecimalEndState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/decimal/DecimalState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/impl/number/decimal/DecimalState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/hex/HexEndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/impl/number/hex/HexEndState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/hex/HexState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/impl/number/hex/HexState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/oct/OctEndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/impl/number/oct/OctEndState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/oct/OctState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/state/impl/number/oct/OctState.java" afterDir="false" />
-    </list>
+    <list default="true" id="0a815501-b971-4f33-860b-2d7da7cf13a4" name="Changes" comment="to edit workspace.xml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lex_analyzer" />
+        <entry key="$PROJECT_DIR$" value="new_arhitecture" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -199,7 +177,7 @@
       <workItem from="1669736559998" duration="9864000" />
       <workItem from="1669894308981" duration="22935000" />
       <workItem from="1670013197560" duration="9000" />
-      <workItem from="1670242001895" duration="1025000" />
+      <workItem from="1670242001895" duration="1569000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1669007398126</created>
@@ -264,7 +242,49 @@
       <option name="project" value="LOCAL" />
       <updated>1669936219099</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="to set Analyzer final">
+      <created>1670244929219</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670244929219</updated>
+    </task>
+    <task id="LOCAL-00011" summary="to delegate lexeme reading to another method: from analyze to readLexeme">
+      <created>1670244996356</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670244996356</updated>
+    </task>
+    <task id="LOCAL-00012" summary="to remove unnecessary &quot;!read.charsExist()&quot; from Analyzer.isNeedStopAnalyze">
+      <created>1670245063186</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670245063186</updated>
+    </task>
+    <task id="LOCAL-00013" summary="to reset State from abstract class to interface">
+      <created>1670245168201</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1670245168201</updated>
+    </task>
+    <task id="LOCAL-00014" summary="to add Reader.Reader last statement to read next value from file for get character when Reader will be initialized">
+      <created>1670245248146</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1670245248146</updated>
+    </task>
+    <task id="LOCAL-00015" summary="to edit workspace.xml">
+      <created>1670245269032</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670245269032</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +307,13 @@
     <MESSAGE value="to refactor and edit code" />
     <MESSAGE value="to edit logic" />
     <MESSAGE value="to create new architecture" />
-    <option name="LAST_COMMIT_MESSAGE" value="to create new architecture" />
+    <MESSAGE value="to set Analyzer final" />
+    <MESSAGE value="to delegate lexeme reading to another method: from analyze to readLexeme" />
+    <MESSAGE value="to remove unnecessary &quot;!read.charsExist()&quot; from Analyzer.isNeedStopAnalyze" />
+    <MESSAGE value="to reset State from abstract class to interface" />
+    <MESSAGE value="to add Reader.Reader last statement to read next value from file for get character when Reader will be initialized" />
+    <MESSAGE value="to edit workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="to edit workspace.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
