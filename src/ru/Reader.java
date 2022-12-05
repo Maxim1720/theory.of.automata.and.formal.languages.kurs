@@ -28,6 +28,7 @@ public class Reader {
             throw new RuntimeException(e);
         }
         flush();
+        next();
     }
 
     public String getBuffer(){
