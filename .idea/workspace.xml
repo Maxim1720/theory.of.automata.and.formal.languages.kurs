@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a815501-b971-4f33-860b-2d7da7cf13a4" name="Changes" comment="to edit workspace.xml" />
+    <list default="true" id="0a815501-b971-4f33-860b-2d7da7cf13a4" name="Changes" comment="to rename 'lexem' to 'lexeme'" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +177,7 @@
       <workItem from="1669736559998" duration="9864000" />
       <workItem from="1669894308981" duration="22935000" />
       <workItem from="1670013197560" duration="9000" />
-      <workItem from="1670242001895" duration="1569000" />
+      <workItem from="1670242001895" duration="2106000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1669007398126</created>
@@ -284,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670245269032</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="to rename 'lexem' to 'lexeme'">
+      <created>1670245309092</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670245309092</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +320,8 @@
     <MESSAGE value="to reset State from abstract class to interface" />
     <MESSAGE value="to add Reader.Reader last statement to read next value from file for get character when Reader will be initialized" />
     <MESSAGE value="to edit workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="to edit workspace.xml" />
+    <MESSAGE value="to rename 'lexem' to 'lexeme'" />
+    <option name="LAST_COMMIT_MESSAGE" value="to rename 'lexem' to 'lexeme'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
