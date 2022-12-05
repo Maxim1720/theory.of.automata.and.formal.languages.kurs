@@ -7,7 +7,7 @@ import ru.state.impl.exp.ExpState;
 import ru.state.impl.number.FloatState;
 import ru.state.impl.number.hex.HexEndState;
 import ru.state.impl.number.hex.HexState;
-import ru.state.transitor.NumberTransitor;
+import ru.state.transitor.NumberTransit;
 
 import java.util.HashMap;
 import java.util.function.Function;
@@ -41,6 +41,6 @@ public class DecimalState implements State {
             reader.next();
         }
 
-        return new NumberTransitor(stateFunctionHashMap).transit(reader);
+        return new NumberTransit(stateFunctionHashMap).transit(reader);
     }
 }

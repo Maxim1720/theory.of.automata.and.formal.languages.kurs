@@ -10,7 +10,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Paths;
 
-public class Reader {
+public final class Reader {
 
     private final BufferedReader bufferedReader;
     private char ch;

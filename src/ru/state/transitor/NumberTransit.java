@@ -9,11 +9,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
-public class NumberTransitor {
+public final class NumberTransit {
 
     private final HashMap<State, Function<Character, Boolean>> stateFunctionHashMap;
 
-    public NumberTransitor(HashMap<State, Function<Character, Boolean>> stateFunctionHashMap){
+    public NumberTransit(HashMap<State, Function<Character, Boolean>> stateFunctionHashMap){
         this.stateFunctionHashMap = stateFunctionHashMap;
     }
 

@@ -9,7 +9,7 @@ import ru.state.impl.number.decimal.DecimalEndState;
 import ru.state.impl.number.decimal.DecimalState;
 import ru.state.impl.number.hex.HexEndState;
 import ru.state.impl.number.hex.HexState;
-import ru.state.transitor.NumberTransitor;
+import ru.state.transitor.NumberTransit;
 
 import java.util.HashMap;
 import java.util.function.Function;
@@ -47,6 +47,6 @@ public class OctState implements State {
             reader.add();
             reader.next();
         }
-        return new NumberTransitor(stateFunctionHashMap).transit(reader);
+        return new NumberTransit(stateFunctionHashMap).transit(reader);
     }
 }
