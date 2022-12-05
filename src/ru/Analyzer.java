@@ -13,12 +13,11 @@ import ru.state.impl.number.oct.OctState;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Analyzer {
+public final class Analyzer {
 
     private final List<State> states;
 
     public Analyzer() {
-
         states = new ArrayList<>();
         states.add(new IdentifierState());
         states.add(new BinaryState());
