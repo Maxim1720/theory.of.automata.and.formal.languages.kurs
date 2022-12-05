@@ -7,7 +7,7 @@ import ru.file.TableUtil;
 import ru.state.State;
 import ru.state.StateType;
 
-public class BiggerCharState extends State {
+public class BiggerCharState implements State {
     @Override
     public boolean is(char ch) {
         return ch == '>';

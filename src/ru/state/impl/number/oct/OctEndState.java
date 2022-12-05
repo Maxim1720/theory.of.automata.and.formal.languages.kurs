@@ -8,7 +8,7 @@ import ru.state.StateType;
 
 import java.util.regex.Pattern;
 
-public class OctEndState extends State {
+public class OctEndState implements State {
     @Override
     public boolean is(char ch) {
         return Pattern.compile("[Oo]").matcher(String.valueOf(ch)).matches();

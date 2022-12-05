@@ -6,7 +6,7 @@ import ru.state.StateType;
 
 import java.util.regex.Pattern;
 
-public class HexState extends State {
+public class HexState implements State {
     @Override
     public boolean is(char ch) {
         return Pattern.matches("[ABCDEFabcdef]", String.valueOf(ch));

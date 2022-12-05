@@ -11,7 +11,7 @@ import ru.state.impl.EndState;
 import java.util.HashSet;
 import java.util.Set;
 
-public class DelimiterState extends State {
+public class DelimiterState implements State {
 
     private final Set<State> states;
 

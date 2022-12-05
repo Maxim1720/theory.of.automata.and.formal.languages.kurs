@@ -11,7 +11,7 @@ import ru.state.impl.number.hex.HexState;
 
 import java.util.regex.Pattern;
 
-public class ExpState extends State {
+public class ExpState implements State {
     @Override
     public boolean is(char ch) {
         return Pattern.compile("[Ee]").matcher(String.valueOf(ch)).matches();

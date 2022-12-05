@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.regex.Pattern;
 
-public class DecimalEndState extends State {
+public class DecimalEndState implements State {
 
     private final HashMap<State, Function<Character, Boolean>> stateFunctionHashMap;
 

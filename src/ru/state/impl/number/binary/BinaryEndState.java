@@ -9,7 +9,7 @@ import ru.state.impl.number.hex.HexState;
 
 import java.util.regex.Pattern;
 
-public class BinaryEndState extends State {
+public class BinaryEndState implements State {
 
     private final HexState hexState;
     private final HexEndState hexEndState;

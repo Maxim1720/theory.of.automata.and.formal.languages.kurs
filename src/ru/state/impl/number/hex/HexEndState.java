@@ -7,7 +7,7 @@ import ru.state.StateType;
 
 import java.util.regex.Pattern;
 
-public class HexEndState extends State {
+public class HexEndState implements State {
 
     @Override
     public boolean is(char ch) {

@@ -4,7 +4,7 @@ import ru.Reader;
 import ru.state.State;
 import ru.state.StateType;
 
-public class EndState extends State {
+public class EndState implements State {
 
     @Override
     public boolean is(char ch) {

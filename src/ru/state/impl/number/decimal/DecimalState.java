@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.function.Function;
 import java.util.regex.Pattern;
 
-public class DecimalState extends State {
+public class DecimalState implements State {
 
     private final HashMap<State, Function<Character, Boolean>> stateFunctionHashMap;
     public DecimalState(){

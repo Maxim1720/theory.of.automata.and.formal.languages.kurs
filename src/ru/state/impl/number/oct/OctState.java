@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.function.Function;
 import java.util.regex.Pattern;
 
-public class OctState extends State {
+public class OctState implements State {
 
     private final HashMap<State, Function<Character, Boolean>> stateFunctionHashMap;
 

@@ -8,7 +8,7 @@ import ru.state.impl.exp.FloatExpState;
 
 import java.util.regex.Pattern;
 
-public class FloatState extends State {
+public class FloatState implements State {
     @Override
     public boolean is(char ch) {
         return Pattern.compile("[.]").matcher(String.valueOf(ch)).matches();

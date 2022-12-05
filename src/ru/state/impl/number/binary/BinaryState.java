@@ -17,7 +17,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.regex.Pattern;
 
-public class BinaryState extends State {
+public class BinaryState implements State {
     HashMap<State, Function<Character,Boolean>> states;
     public BinaryState() {
 

@@ -6,7 +6,7 @@ import ru.state.StateType;
 
 import java.util.regex.Pattern;
 
-public class FloatExpState extends State {
+public class FloatExpState implements State {
 
     @Override
     public boolean is(char ch) {

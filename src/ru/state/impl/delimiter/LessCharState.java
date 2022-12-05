@@ -7,7 +7,7 @@ import ru.file.TableUtil;
 import ru.state.State;
 import ru.state.StateType;
 
-public class LessCharState extends State {
+public class LessCharState implements State {
     @Override
     public boolean is(char ch) {
         return ch == '<';

@@ -4,7 +4,7 @@ import ru.Reader;
 import ru.state.State;
 import ru.state.StateType;
 
-public class CommentState extends State {
+public class CommentState implements State {
     @Override
     public boolean is(char ch) {
         return ch == '#';

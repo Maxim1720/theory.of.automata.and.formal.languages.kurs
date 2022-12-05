@@ -8,7 +8,7 @@ import ru.file.TableUtil;
 import ru.state.State;
 import ru.state.StateType;
 
-public class IdentifierState extends State {
+public class IdentifierState implements State {
 
     @Override
     public boolean is(char ch) {
