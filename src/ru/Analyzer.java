@@ -33,24 +33,24 @@ public final class Analyzer {
         reader.setStateType(StateType.START);
         if (reader.charsExists()) {
             while (!isNeedStopAnalyze(reader)) {
-                if (reader.getCurrent() == Character.MIN_VALUE) {
-                    reader.next();
-                }
-                reader.flush();
-                if (!Character.isWhitespace(reader.getCurrent())) {
-                    reader = tryTransit(reader);
-                    System.out.println(reader.getBuffer() + ": " + reader.getStateType());
-                } else {
-                    reader.setStateType(StateType.WHITE_SPACE);
-                    reader.next();
-                }
+                reader = readLexem(reader);
                 if (reader.getStateType().equals(StateType.ERR)) {
                     throw new IllegalArgumentException("invalid lexem: " + reader.getBuffer());
                 }
-
             }
         }
+    }
 
+    private Reader readLexem(Reader reader){
+        reader.flush();
+        if (!Character.isWhitespace(reader.getCurrent())) {
+            reader = tryTransit(reader);
+            System.out.println(reader.getBuffer() + ": " + reader.getStateType());
+        } else {
+            reader.setStateType(StateType.WHITE_SPACE);
+            reader.next();
+        }
+        return reader;
     }
 
     private Reader tryTransit(Reader reader) {
