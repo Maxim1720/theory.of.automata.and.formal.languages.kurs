@@ -1,5 +1,7 @@
 package ru;
 
+import ru.lexical.Analyzer;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

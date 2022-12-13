@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a815501-b971-4f33-860b-2d7da7cf13a4" name="Changes" comment="to rename 'lexem' to 'lexeme'" />
+    <list default="true" id="0a815501-b971-4f33-860b-2d7da7cf13a4" name="Changes" comment="to rename NumberTransitor to NumberTransit and set final class">
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/Analyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/Analyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/Analyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/file/FileLooker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/file/FileLooker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/file/FileOuter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/file/FileOuter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/file/FilePutter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/file/FilePutter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/file/TableUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/file/TableUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/handler/NumberLexemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/handler/NumberLexemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/StateType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/StateType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/CommentState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/CommentState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/EndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/EndState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/IdentifierState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/IdentifierState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/delimiter/BiggerCharState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/delimiter/BiggerCharState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/delimiter/DelimiterState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/delimiter/DelimiterState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/delimiter/LessCharState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/delimiter/LessCharState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/exp/ExpState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/exp/ExpState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/exp/FloatExpState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/exp/FloatExpState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/FloatState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/FloatState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/binary/BinaryEndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/binary/BinaryEndState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/binary/BinaryState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/binary/BinaryState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/decimal/DecimalEndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/decimal/DecimalEndState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/decimal/DecimalState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/decimal/DecimalState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/hex/HexEndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/hex/HexEndState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/hex/HexState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/hex/HexState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/oct/OctEndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/oct/OctEndState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/oct/OctState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/oct/OctState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/state/transitor/NumberTransit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/transitor/NumberTransit.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +106,7 @@
       <module name="LexAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.*" />
+          <option name="PATTERN" value="ru.lexical.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -177,7 +208,7 @@
       <workItem from="1669736559998" duration="9864000" />
       <workItem from="1669894308981" duration="22935000" />
       <workItem from="1670013197560" duration="9000" />
-      <workItem from="1670242001895" duration="2106000" />
+      <workItem from="1670242001895" duration="3110000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1669007398126</created>
@@ -291,7 +322,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670245309092</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="to rename 'lexem' to 'lexeme'">
+      <created>1670245837742</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670245837742</updated>
+    </task>
+    <task id="LOCAL-00018" summary="to rename NumberTransitor to NumberTransit and set final class">
+      <created>1670245928112</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1670245928112</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +366,8 @@
     <MESSAGE value="to add Reader.Reader last statement to read next value from file for get character when Reader will be initialized" />
     <MESSAGE value="to edit workspace.xml" />
     <MESSAGE value="to rename 'lexem' to 'lexeme'" />
-    <option name="LAST_COMMIT_MESSAGE" value="to rename 'lexem' to 'lexeme'" />
+    <MESSAGE value="to rename NumberTransitor to NumberTransit and set final class" />
+    <option name="LAST_COMMIT_MESSAGE" value="to rename NumberTransitor to NumberTransit and set final class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
