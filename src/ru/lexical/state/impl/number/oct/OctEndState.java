@@ -1,8 +1,6 @@
 package ru.lexical.state.impl.number.oct;
 
 import ru.lexical.Reader;
-import ru.lexical.file.FilePutter;
-import ru.lexical.file.TableUtil;
 import ru.lexical.state.State;
 import ru.lexical.state.StateType;
 
@@ -26,7 +24,6 @@ public class OctEndState implements State {
                 reader.setStateType(StateType.ERR);
             }
         }
-        new FilePutter(TableUtil.tnPath).put(TableUtil.tnNumber, reader.getBuffer());
         return reader;
     }
 }

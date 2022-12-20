@@ -20,14 +20,13 @@ public class OctState implements State {
     private final HashMap<State, Function<Character, Boolean>> stateFunctionHashMap;
 
     public OctState(){
-
         stateFunctionHashMap = new HashMap<>();
         stateFunctionHashMap.put(new OctEndState(), new OctEndState()::is);
         stateFunctionHashMap.put(new DecimalState(), new DecimalState()::is);
         stateFunctionHashMap.put(new ExpState(), new ExpState()::is);
         stateFunctionHashMap.put(new DecimalEndState(), new DecimalEndState()::is);
         stateFunctionHashMap.put(new HexState(), character ->
-                Pattern.compile("[ABCF]").matcher(String.valueOf(character)).matches());
+                Pattern.compile("[ABCFabcf]").matcher(String.valueOf(character)).matches());
         stateFunctionHashMap.put(new HexEndState(), new HexEndState()::is);
         stateFunctionHashMap.put(new FloatState(), new FloatState()::is);
 

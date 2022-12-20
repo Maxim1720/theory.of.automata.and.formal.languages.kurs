@@ -1,7 +1,7 @@
 package ru.lexical;
 
 import ru.lexical.file.FileLooker;
-import ru.lexical.file.TableUtil;
+import ru.util.TableUtil;
 import ru.lexical.state.StateType;
 
 import java.io.BufferedReader;

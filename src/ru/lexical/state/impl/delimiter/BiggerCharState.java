@@ -3,7 +3,7 @@ package ru.lexical.state.impl.delimiter;
 import ru.lexical.Reader;
 import ru.lexical.file.FileLooker;
 import ru.lexical.file.FileOuter;
-import ru.lexical.file.TableUtil;
+import ru.util.TableUtil;
 import ru.lexical.state.State;
 import ru.lexical.state.StateType;
 
@@ -20,6 +20,12 @@ public class BiggerCharState implements State {
             reader.next();
             if(reader.getCurrent()=='='){
                 reader.add();
+                reader.next();
+                new FileOuter().out(TableUtil.tlNumber,
+                        new FileLooker(TableUtil.tlPath)
+                                .look(reader.getBuffer()));
+            }
+            else{
                 new FileOuter().out(TableUtil.tlNumber,
                         new FileLooker(TableUtil.tlPath)
                                 .look(reader.getBuffer()));

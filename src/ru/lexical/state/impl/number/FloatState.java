@@ -1,7 +1,6 @@
 package ru.lexical.state.impl.number;
 
 import ru.lexical.Reader;
-import ru.lexical.handler.NumberLexemHandler;
 import ru.lexical.state.State;
 import ru.lexical.state.StateType;
 import ru.lexical.state.impl.exp.FloatExpState;
@@ -41,7 +40,6 @@ public class FloatState implements State {
             reader.add();
             reader.setStateType(StateType.ERR);
         }
-        new NumberLexemHandler().handle(reader.getBuffer());
         return reader;
     }
 }

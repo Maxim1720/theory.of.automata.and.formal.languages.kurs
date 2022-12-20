@@ -4,7 +4,7 @@ import ru.lexical.Reader;
 import ru.lexical.file.FileLooker;
 import ru.lexical.file.FileOuter;
 import ru.lexical.file.FilePutter;
-import ru.lexical.file.TableUtil;
+import ru.util.TableUtil;
 import ru.lexical.state.State;
 import ru.lexical.state.StateType;
 
@@ -43,7 +43,7 @@ public class IdentifierState implements State {
                 reader.setStateType(StateType.IDENTIFIER);
                 z = new FileLooker(TableUtil.tiPath).look(reader.getBuffer());
                 if(z==0){
-                    new FilePutter(TableUtil.tiPath).put(TableUtil.tiNumber, reader.getBuffer());
+                    z = new FilePutter(TableUtil.tiPath).put(TableUtil.tiNumber, reader.getBuffer());
                 }
                 new FileOuter().out(TableUtil.tiNumber,z);
             }

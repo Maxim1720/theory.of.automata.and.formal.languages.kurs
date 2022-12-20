@@ -1,37 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a815501-b971-4f33-860b-2d7da7cf13a4" name="Changes" comment="to rename NumberTransitor to NumberTransit and set final class">
-      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/Analyzer.java" afterDir="false" />
+    <list default="true" id="0a815501-b971-4f33-860b-2d7da7cf13a4" name="Changes" comment="to moving classes">
+      <change afterPath="$PROJECT_DIR$/src/ru/exception/ParseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/exception/lex/IncorrectLexemeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/exception/sem/SemanticException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/exception/syn/SyntacticException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/lexical/LexicalAnalyzer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/lexical/file/LexemeOuter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/semantic/SemanticAnalyzer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/semantic/checker/IdentifierAssignmentChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/semantic/checker/expression/AssignmentChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/semantic/checker/expression/DoubleOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/semantic/checker/expression/ExpressionChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/semantic/checker/expression/ExpressionSignTypeChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/semantic/checker/operation/AssignmentChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/semantic/checker/operation/OperationChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/semantic/checker/operation/conditional/ConditionalChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/semantic/reader/AssignmentOperationReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/semantic/reader/ConditionalReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/semantic/reader/DescriptionReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/semantic/reader/ExpressionReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/semantic/reader/Reader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/SyntacticalAnalyzer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/reader/LexemeReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/reader/LexemeReaderImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/state/Description.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/state/ProgramState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/state/expression/Expression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/state/expression/Factor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/state/expression/LogicConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/state/expression/operand/Addition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/state/expression/operand/Operand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/state/operator/AbsOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/state/operator/Assignment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/state/operator/Composite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/state/operator/Conditional.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/state/operator/ConditionalCycle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/state/operator/FixCycle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/state/operator/Input.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/state/operator/Operator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/state/operator/Output.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/writer/AssignmentWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/writer/ConditionalWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/writer/DescriptionOuter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/syntactical/writer/ExpressionOuter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/util/TypeConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/ru/syntactical/reader/LexemeReaderImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/Analyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/Analyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/code.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/code.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/out_table/lex_table.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/out_table/lex_table.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/source/ti.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/source/ti.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/source/tn.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/source/tn.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/Analyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/Analyzer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/file/FileLooker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/file/FileLooker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/file/FileOuter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/file/FileOuter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/file/FilePutter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/file/FilePutter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/file/TableUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/file/TableUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/handler/NumberLexemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/handler/NumberLexemHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/StateType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/StateType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/CommentState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/CommentState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/EndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/EndState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/IdentifierState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/IdentifierState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/delimiter/BiggerCharState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/delimiter/BiggerCharState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/delimiter/DelimiterState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/delimiter/DelimiterState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/delimiter/LessCharState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/delimiter/LessCharState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/exp/ExpState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/exp/ExpState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/exp/FloatExpState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/exp/FloatExpState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/FloatState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/FloatState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/binary/BinaryEndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/binary/BinaryEndState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/binary/BinaryState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/binary/BinaryState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/decimal/DecimalEndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/decimal/DecimalEndState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/decimal/DecimalState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/decimal/DecimalState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/hex/HexEndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/hex/HexEndState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/hex/HexState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/hex/HexState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/oct/OctEndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/oct/OctEndState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/impl/number/oct/OctState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/oct/OctState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/state/transitor/NumberTransit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/transitor/NumberTransit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/lexical/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/lexical/file/FileLooker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/file/FileLooker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/lexical/file/TableUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/util/TableUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/lexical/handler/NumberLexemHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/handler/NumberLexemHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/lexical/state/impl/CommentState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/CommentState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/lexical/state/impl/IdentifierState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/IdentifierState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/lexical/state/impl/delimiter/BiggerCharState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/delimiter/BiggerCharState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/lexical/state/impl/delimiter/DelimiterState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/delimiter/DelimiterState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/lexical/state/impl/delimiter/LessCharState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/delimiter/LessCharState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/lexical/state/impl/exp/ExpState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/exp/ExpState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/FloatState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/FloatState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/binary/BinaryEndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/binary/BinaryEndState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/binary/BinaryState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/binary/BinaryState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/hex/HexEndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/hex/HexEndState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/oct/OctEndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/oct/OctEndState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/oct/OctState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/impl/number/oct/OctState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/lexical/state/transitor/NumberTransit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/lexical/state/transitor/NumberTransit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +82,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -65,23 +105,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/home/almat/Загрузки/Telegram Desktop/TPLKR",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -93,10 +134,12 @@
       <recent name="ru" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.syntactical.reader" />
       <recent name="ru.newFsm" />
       <recent name="fsm.state.current" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.semantic" />
       <recent name="ru.newFsm.state" />
     </key>
   </component>
@@ -114,65 +157,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FiniteStatesMachineTest.putChar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LexemeReaderImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LexAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.newFsm.*" />
+          <option name="PATTERN" value="ru.syntactical.reader.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.newFsm" />
-      <option name="MAIN_CLASS_NAME" value="ru.newFsm.FiniteStatesMachineTest" />
-      <option name="METHOD_NAME" value="putChar" />
+      <option name="PACKAGE_NAME" value="ru.syntactical.reader" />
+      <option name="MAIN_CLASS_NAME" value="ru.syntactical.reader.LexemeReaderImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LexemeReaderImplTest.next" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LexAnalyzer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.syntactical.reader.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.syntactical.reader" />
+      <option name="MAIN_CLASS_NAME" value="ru.syntactical.reader.LexemeReaderImplTest" />
+      <option name="METHOD_NAME" value="next" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FiniteStatesMachineTest.testPutChar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LexemeReaderImplTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LexAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.newFsm.*" />
+          <option name="PATTERN" value="ru.syntactical.reader.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.newFsm" />
-      <option name="MAIN_CLASS_NAME" value="ru.newFsm.FiniteStatesMachineTest" />
-      <option name="METHOD_NAME" value="testPutChar" />
+      <option name="PACKAGE_NAME" value="ru.syntactical.reader" />
+      <option name="MAIN_CLASS_NAME" value="ru.syntactical.reader.LexemeReaderImplTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IdentifierStateTest.testTransit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LexemeReaderImplTest.testIdentifierRegex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LexAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fsm.state.current.*" />
+          <option name="PATTERN" value="ru.syntactical.reader.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="fsm.state.current" />
-      <option name="MAIN_CLASS_NAME" value="fsm.state.current.IdentifierStateTest" />
-      <option name="METHOD_NAME" value="testTransit" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IdentifierStateTest.testisTransitive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LexAnalyzer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fsm.state.current.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="fsm.state.current" />
-      <option name="MAIN_CLASS_NAME" value="fsm.state.current.IdentifierStateTest" />
-      <option name="METHOD_NAME" value="testisTransitive" />
+      <option name="PACKAGE_NAME" value="ru.syntactical.reader" />
+      <option name="MAIN_CLASS_NAME" value="ru.syntactical.reader.LexemeReaderImplTest" />
+      <option name="METHOD_NAME" value="testIdentifierRegex" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -181,10 +223,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.FiniteStatesMachineTest.testPutChar" />
-        <item itemvalue="JUnit.FiniteStatesMachineTest.putChar" />
-        <item itemvalue="JUnit.IdentifierStateTest.testTransit" />
-        <item itemvalue="JUnit.IdentifierStateTest.testisTransitive" />
+        <item itemvalue="JUnit.LexemeReaderImplTest.testIdentifierRegex" />
+        <item itemvalue="JUnit.LexemeReaderImplTest.test" />
+        <item itemvalue="JUnit.LexemeReaderImplTest" />
+        <item itemvalue="JUnit.LexemeReaderImplTest.next" />
       </list>
     </recent_temporary>
   </component>
@@ -209,6 +251,11 @@
       <workItem from="1669894308981" duration="22935000" />
       <workItem from="1670013197560" duration="9000" />
       <workItem from="1670242001895" duration="3110000" />
+      <workItem from="1670936887759" duration="708000" />
+      <workItem from="1671199637614" duration="12000" />
+      <workItem from="1671221547710" duration="7446000" />
+      <workItem from="1671266021613" duration="76000" />
+      <workItem from="1671290645223" duration="97283000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1669007398126</created>
@@ -336,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670245928112</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="to moving classes">
+      <created>1670936996243</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1670936996243</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +421,8 @@
     <MESSAGE value="to edit workspace.xml" />
     <MESSAGE value="to rename 'lexem' to 'lexeme'" />
     <MESSAGE value="to rename NumberTransitor to NumberTransit and set final class" />
-    <option name="LAST_COMMIT_MESSAGE" value="to rename NumberTransitor to NumberTransit and set final class" />
+    <MESSAGE value="to moving classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="to moving classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -376,6 +431,21 @@
           <url>file://$PROJECT_DIR$/src/ru/fsm/state/current/IdentifierState.java</url>
           <line>21</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ru/semantic/checker/expression/ExpressionSignTypeChecker.java</url>
+          <line>205</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ru/semantic/checker/IdentifierAssignmentChecker.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ru/semantic/checker/IdentifierAssignmentChecker.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="122" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

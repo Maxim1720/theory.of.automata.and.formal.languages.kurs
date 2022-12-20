@@ -20,7 +20,9 @@ public final class NumberTransit {
     public Reader transit(Reader reader){
         for(Map.Entry<State, Function<Character, Boolean>> e: stateFunctionHashMap.entrySet()){
             if(e.getValue().apply(reader.getCurrent())){
-                return e.getKey().transit(reader);
+                //return e.getKey().transit(reader);
+                reader = e.getKey().transit(reader);
+                break;
             }
         }
 
@@ -30,7 +32,7 @@ public final class NumberTransit {
             reader.setStateType(StateType.ERR);
         }
         else {
-            new NumberLexemHandler().handle(reader.getBuffer());
+        //    new NumberLexemHandler().handle(reader.getBuffer());
         }
 
         return reader;

@@ -2,6 +2,7 @@ package ru.lexical.file;
 
 import java.io.*;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.List;
 
 public class FileLooker {
@@ -28,17 +29,17 @@ public class FileLooker {
     }
 
     private int searchIndex(List<String> lines, String lex){
-        for (String s: lines){
+        return lines.indexOf(lex) +1;
+        /*for (String s: lines){
             if(s.equals(lex)){
                 return lines.indexOf(s)+1;
             }
         }
-        return 0;
+        return 0;*/
     }
 
     private List<String> lines() throws FileNotFoundException {
-        BufferedReader bufferedReader
-                = new BufferedReader(
+        BufferedReader bufferedReader = new BufferedReader(
                 new FileReader(
                         Paths.get(path)
                                 .toFile()));

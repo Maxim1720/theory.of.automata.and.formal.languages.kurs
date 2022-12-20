@@ -52,6 +52,9 @@ public class BinaryState implements State {
                 return e.getKey().transit(reader);
             }
         }
+        if(Pattern.matches("\\d+",reader.getBuffer())) {
+            reader = new DecimalState().transit(reader);
+        }
         if(!Character.isDigit(reader.getCurrent())
                 && !reader.currentIsDelimiter()
                 && !Character.isWhitespace(reader.getCurrent())) {

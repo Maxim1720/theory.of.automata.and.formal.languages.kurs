@@ -3,7 +3,7 @@ package ru.lexical.state.impl.delimiter;
 import ru.lexical.Reader;
 import ru.lexical.file.FileLooker;
 import ru.lexical.file.FileOuter;
-import ru.lexical.file.TableUtil;
+import ru.util.TableUtil;
 import ru.lexical.state.State;
 import ru.lexical.state.StateType;
 import ru.lexical.state.impl.EndState;

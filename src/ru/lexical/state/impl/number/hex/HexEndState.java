@@ -1,7 +1,6 @@
 package ru.lexical.state.impl.number.hex;
 
 import ru.lexical.Reader;
-import ru.lexical.handler.NumberLexemHandler;
 import ru.lexical.state.State;
 import ru.lexical.state.StateType;
 
@@ -24,8 +23,6 @@ public class HexEndState implements State {
             reader.add();
             reader.setStateType(StateType.ERR);
         }
-
-        new NumberLexemHandler().handle(reader.getBuffer());
         return reader;
     }
 }

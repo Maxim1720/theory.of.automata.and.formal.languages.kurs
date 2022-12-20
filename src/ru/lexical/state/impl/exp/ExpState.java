@@ -1,9 +1,6 @@
 package ru.lexical.state.impl.exp;
 
 import ru.lexical.Reader;
-import ru.lexical.file.FileOuter;
-import ru.lexical.file.FilePutter;
-import ru.lexical.file.TableUtil;
 import ru.lexical.state.State;
 import ru.lexical.state.StateType;
 import ru.lexical.state.impl.number.hex.HexEndState;
@@ -40,9 +37,6 @@ public class ExpState implements State {
                     && !reader.currentIsDelimiter()){
                 reader.setStateType(StateType.ERR);
             }
-            new FileOuter().out(TableUtil.tnNumber,
-                    new FilePutter(TableUtil.tnPath)
-                            .put(TableUtil.tnNumber, reader.getBuffer()));
         }
         else if (Character.isDigit(reader.getCurrent())) {
             while (reader.charsExists() && Character.isDigit(reader.getCurrent())){
@@ -50,29 +44,20 @@ public class ExpState implements State {
                 reader.next();
             }
 
-            if(/*isHex(reader.getCurrent())*/hexState.is(reader.getCurrent())){
-                //hexState();
+            if(hexState.is(reader.getCurrent())){
                 reader = hexState.transit(reader);
             }
-            else if (/*isHexEnd(reader.getCurrent())*/hexEndState.is(reader.getCurrent())){
-//                hexEndState();
+            else if (hexEndState.is(reader.getCurrent())){
                 reader = hexEndState.transit(reader);
             }
             else if(!Character.isWhitespace(reader.getCurrent()) && !reader.currentIsDelimiter()) {
                 reader.add();
                 reader.setStateType(StateType.ERR);
             }
-            else{
-                new FileOuter().out(TableUtil.tnNumber,
-                        new FilePutter(TableUtil.tnPath)
-                                .put(TableUtil.tnNumber, reader.getBuffer()));
-            }
         }
         else if (hexState.is(reader.getCurrent())){
-//            hexState();
             reader = hexState.transit(reader);
         } else if (hexEndState.is(reader.getCurrent())) {
-//            hexEndState();
             reader = hexEndState.transit(reader);
         }
         return reader;

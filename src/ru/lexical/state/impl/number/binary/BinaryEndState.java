@@ -1,7 +1,6 @@
 package ru.lexical.state.impl.number.binary;
 
 import ru.lexical.Reader;
-import ru.lexical.handler.NumberLexemHandler;
 import ru.lexical.state.State;
 import ru.lexical.state.StateType;
 import ru.lexical.state.impl.number.hex.HexEndState;
@@ -27,6 +26,7 @@ public class BinaryEndState implements State {
 
     @Override
     public Reader transit(Reader reader) {
+        reader.setStateType(StateType.BINARY_END);
         reader.add();
         reader.next();
         if(hexState.is(reader.getCurrent())
@@ -37,9 +37,6 @@ public class BinaryEndState implements State {
         } else if (!Character.isWhitespace(reader.getCurrent())
                 && !reader.currentIsDelimiter()) {
             reader.setStateType(StateType.ERR);
-        }
-        else{
-            new NumberLexemHandler().handle(reader.getBuffer());
         }
         return reader;
     }

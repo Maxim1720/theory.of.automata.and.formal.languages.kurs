@@ -1,0 +1,11 @@
+a as b * c * a
+b as 42.123E+24
+b as b - 1
+a as a + 1
+dwq as 0
+a as a * 2
+b as b / 2
+d0 as 112321d
+d0 as 5e+8
+d0 as .569e889
+wdw as 4565465456

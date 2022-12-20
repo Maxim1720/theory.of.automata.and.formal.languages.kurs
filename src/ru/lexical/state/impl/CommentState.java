@@ -22,8 +22,8 @@ public class CommentState implements State {
             }
         }
         if(!end){
+            reader.add();
             reader.setStateType(StateType.ERR);
-            //throw new IllegalArgumentException("comment wasn't end");
         }
         return reader;
     }
